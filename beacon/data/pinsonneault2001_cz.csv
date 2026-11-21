@@ -1,0 +1,16 @@
+# Mass of the surface convection zone of main-sequence stars vs Teff, read by eye from the thick
+# (solar-metallicity, age-sequence) curve of Pinsonneault, DePoy & Coffee (2001, ApJ 556, L59) Fig. 1.
+# Reading uncertainty about 0.05 dex; the paper quotes a 0.15 dex model spread.
+teff,log_mcz_msun
+4000,-1.10
+4250,-1.20
+4500,-1.25
+4750,-1.29
+5000,-1.33
+5250,-1.38
+5500,-1.48
+5750,-1.68
+6000,-1.99
+6200,-2.38
+6300,-2.62
+6400,-3.00

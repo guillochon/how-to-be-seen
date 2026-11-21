@@ -1,0 +1,64 @@
+# Settings for this paper. Every script in util/ reads this file, so a new paper
+# changes it here and nowhere else. `python util/new_paper.py` fills it in for you.
+
+[paper]
+# Short machine name: names the arXiv zip (<slug>-arxiv.zip) and the public snapshot.
+slug = "isotope-beacons"
+title = "How to Be Seen: Polluting Your Own Star as a Beacon to the Galaxy"
+# Running head, for the classes that print one (mnras, aa, amsart). Empty means the title.
+short_title = ""
+# The journal class. One of the folders in templates/journals/. The journal skill
+# (.claude/skills/journal/SKILL.md) names the same journal and says how to write for it.
+journal = "elsarticle"
+keywords = ["SETI", "technosignatures", "chemically peculiar stars", "stellar abundances", "radioactive isotopes", "high-resolution spectroscopy"]
+# arXiv rejects abstracts over 1920 characters, counted with TeX commands included.
+abstract_limit = 1920
+# Bibliography files in paper/, without extension in \bibliography but with it here.
+bibs = ["references.bib"]
+# Which layout arXiv receives: "preprint" (the published look) or "submit".
+arxiv_mode = "preprint"
+
+# One [[authors]] table per author, in author order.
+[[authors]]
+name = "James Guillochon"
+email = "guillochon@gmail.com"
+affiliation = "Independent Researcher"
+orcid = ""
+corresponding = true
+
+[style]
+# Words that util/check_style.py rejects in prose. Add your own pet hates.
+banned = ["honestly", "honest", "trap", "traps", "delve", "delves", "tapestry", "crucially", "notably", "seamlessly", "groundbreaking", "game-changing",
+    # British spellings (writing-style.mdc: American spelling throughout).
+    "per cent", "colour", "colours", "grey", "favour", "favours", "favoured", "favourable", "modelled", "modelling", "neighbour", "neighbours", "disc", "discs", "catalogued", "towards", "catalysed", "analyse", "analysed", "behaviour", "labelled"]
+# Warn when em-dashes exceed this many per 1000 words of prose.
+max_em_dashes_per_1000 = 2.0
+
+[public]
+# util/push_public.py copies these paths into a public GitHub repo. Leave repo empty
+# while the paper is private. Globs are allowed. research/review*.md and research/*/
+# (downloaded papers) are never copied, unless a file there is named exactly.
+repo = "guillochon/how-to-be-seen"
+description = "Source, code and data for \"How to Be Seen: Polluting Your Own Star as a Beacon to the Galaxy\""
+include = [
+    "paper/*.tex",
+    "paper/tables/*.tex",
+    "paper/latexmkrc",
+    "paper/*.bib",
+    "paper/figures/*.py",
+    "paper/figures/*.pdf",
+    "paper/data/*.csv",
+    "paper/README.md",
+    "research/tc_limits/detect.csv",
+    "beacon/*.py",
+    "beacon/data/*.csv",
+    "scripts/*.py",
+    "scripts/*.sh",
+    "tests/*.py",
+    "util/check_abstract.py",
+    "util/check_citations.py",
+    "util/paperconf.py",
+    "paper.toml",
+    "pyproject.toml",
+    "uv.lock",
+]
